@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>セリア ミニ花ふきん 完成応援キット｜刺し子どり</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* ===== 上品な和（ご指定トーン） ===== */
+      --color-main: #6b2c2c;      /* 小豆色 */
+      --color-accent: #b08a42;    /* 金茶 */
+      --color-text: #2d2d2d;      /* 墨色 */
+      --color-sub-text: #666666;  /* 灰 */
+      --color-bg: #fdfcf9;        /* 生成り */
+      --color-card: #ffffff;      /* 白 */
+      --color-shadow: rgba(107, 44, 44, 0.08);
+
+      --color-line: #06c755;      /* LINE */
+      --color-square: #e38a2f;    /* Square（落ち着いた橙） */
+      --color-mercari: #d94141;   /* メルカリ（赤） */
+
+      --font-serif: "Noto Serif JP", serif;
+      --font-sans: "Noto Sans JP", sans-serif;
+
+      /* レイアウト */
+      --container: 820px;
+      --radius: 12px;
+      --radius-pill: 999px;
+
+      /* 余白（可変） */
+      --sp-1: 10px;
+      --sp-2: 14px;
+      --sp-3: 18px;
+      --sp-4: 24px;
+      --sp-5: 32px;
+      --sp-6: 44px;
+      --sp-7: 64px;
+
+      /* 影 */
+      --shadow-card: 0 15px 35px var(--color-shadow);
+      --shadow-soft: 0 10px 25px rgba(0,0,0,0.12);
+      --shadow-sticky: 0 12px 45px rgba(0,0,0,0.25);
+
+      /* スクロール位置（固定CTA分） */
+      --scroll-offset: 88px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      color: var(--color-text);
+      background-color: var(--color-bg);
+      font-family: var(--font-sans);
+      line-height: 2.0;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* 背景：和紙の粒感（固定） */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(#e0dcd0 0.55px, transparent 0.55px);
+      background-size: 40px 40px;
+      opacity: 0.20;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    a { color: inherit; }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 20px 210px; /* 追従CTAが増えるので少し余白を増やす */
+    }
+
+    /* --------------------
+      HERO
+    -------------------- */
+    .hero {
+      position: relative;
+      height: 70vh;
+      min-height: 460px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+      margin-bottom: var(--sp-7);
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.72) saturate(0.95);
+      transform: scale(1.02);
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg,
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.36),
+        rgba(0,0,0,0.58)
+      );
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 22px;
+      max-width: 760px;
+    }
+
+    .hero-tag {
+      font-size: 0.92rem;
+      letter-spacing: 0.18em;
+      border: 1px solid rgba(255,255,255,0.9);
+      display: inline-block;
+      padding: 6px 22px;
+      margin-bottom: 24px;
+      background: rgba(0,0,0,0.22);
+      backdrop-filter: blur(2px);
+      border-radius: var(--radius-pill);
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 2.45rem;
+      line-height: 1.45;
+      font-weight: 700;
+      margin: 0;
+      text-shadow: 2px 2px 14px rgba(0,0,0,0.35);
+      letter-spacing: 0.02em;
+    }
+
+    .hero-title-main {
+      display: block;
+      font-size: 1.18em;
+      margin-top: 10px;
+      color: #f0e1cf;
+      font-weight: 900;
+    }
+
+    .hero-sub {
+      font-size: 0.42em;
+      font-weight: 400;
+      margin-top: 16px;
+      letter-spacing: 0.28em;
+      opacity: 0.95;
+    }
+
+    /* --------------------
+      SECTIONS
+    -------------------- */
+    .section { margin-bottom: 84px; }
+
+    .intro-text {
+      text-align: center;
+      font-size: 1.18rem;
+      font-weight: 500;
+      margin: 0 0 44px;
+      letter-spacing: 0.02em;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      text-align: center;
+      font-size: 1.85rem;
+      color: var(--color-main);
+      margin-bottom: 40px;
+      letter-spacing: 0.02em;
+    }
+
+    .section-title::after {
+      content: "───";
+      display: block;
+      font-size: 0.85rem;
+      letter-spacing: -2px;
+      margin-top: 10px;
+      opacity: 0.40;
+    }
+
+    /* --------------------
+      CARDS & BOXES
+    -------------------- */
+    .card {
+      background: var(--color-card);
+      border: 1px solid #eee;
+      border-radius: var(--radius);
+      padding: 42px 32px;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 30px;
+    }
+
+    .price-box {
+      border: 2px solid var(--color-main);
+      text-align: center;
+      padding: 44px 22px;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 12px 30px var(--color-shadow);
+    }
+
+    .price-yen {
+      font-family: var(--font-serif);
+      font-size: 3.5rem;
+      color: var(--color-main);
+      font-weight: 900;
+      margin: 6px 0 0;
+      letter-spacing: 0.02em;
+    }
+
+    .price-yen span {
+      font-size: 1.2rem;
+      margin-left: 6px;
+      color: var(--color-sub-text);
+      font-weight: 500;
+    }
+
+    .stock-row {
+      margin: 30px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .stock-badge {
+      background: #f8f0e5;
+      padding: 7px 16px;
+      border-radius: 6px;
+      font-size: 0.98rem;
+      border: 1px solid rgba(176,138,66,0.25);
+    }
+
+    .notice-mini {
+      color: var(--color-sub-text);
+      font-size: 0.95rem;
+      margin-top: 14px;
+      line-height: 1.8;
+    }
+
+    /* --------------------
+      BUTTONS
+    -------------------- */
+    .btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: var(--radius-pill);
+      padding: 20px 30px;
+      margin: 14px 0;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.02em;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn:focus-visible {
+      outline: 3px solid rgba(176,138,66,0.35);
+      outline-offset: 3px;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-soft);
+      filter: brightness(1.02);
+    }
+
+    .btn-text { font-size: 1.18rem; font-weight: 800; }
+    .btn-desc { font-size: 0.82rem; opacity: 0.92; margin-top: 5px; }
+
+    .btn-square { background: var(--color-main); color: #fff; }
+
+    .btn-line {
+      background: #fff;
+      border: 2px solid var(--color-line);
+      color: var(--color-line);
+      font-weight: 800;
+    }
+
+    .btn-mercari {
+      background: #fff;
+      border: 2px solid var(--color-mercari);
+      color: var(--color-mercari);
+      font-weight: 800;
+    }
+
+    /* --------------------
+      Accent / Lists
+    -------------------- */
+    .accent-mark {
+      color: var(--color-main);
+      border-bottom: 2px dotted var(--color-accent);
+      padding-bottom: 2px;
+    }
+
+    ul.check-list {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+    }
+
+    ul.check-list li {
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 18px;
+    }
+
+    ul.check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: var(--color-accent);
+      font-weight: 900;
+      font-size: 1.4rem;
+      line-height: 1.2;
+    }
+
+    /* --------------------
+      Note Box (Mercari exception)
+    -------------------- */
+    .note-box {
+      background: rgba(107, 44, 44, 0.03);
+      border: 1px solid rgba(107, 44, 44, 0.12);
+      padding: 26px 24px;
+      border-radius: var(--radius);
+      margin-top: 18px;
+    }
+
+    .note-box-title {
+      font-family: var(--font-serif);
+      color: var(--color-main);
+      font-weight: 700;
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* --------------------
+      FAQ
+    -------------------- */
+    .faq-wrap {
+      background: rgba(107, 44, 44, 0.03);
+      padding: 30px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(107,44,44,0.10);
+    }
+
+    details {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.04);
+    }
+
+    summary {
+      font-weight: 800;
+      cursor: pointer;
+      color: var(--color-main);
+      outline: none;
+      letter-spacing: 0.02em;
+    }
+
+    details p {
+      margin: 12px 0 0;
+      padding-left: 10px;
+      color: var(--color-text);
+    }
+
+    /* --------------------
+      Voice (quote)
+    -------------------- */
+    .quote {
+      margin: 18px 0 0;
+      padding: 18px 18px 18px 22px;
+      border-left: 4px solid rgba(176,138,66,0.55);
+      background: rgba(176,138,66,0.06);
+      border-radius: 10px;
+      color: var(--color-text);
+    }
+
+    .quote small {
+      display: block;
+      color: var(--color-sub-text);
+      margin-top: 10px;
+      text-align: right;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    /* --------------------
+      Media (画像挿入枠)
+    -------------------- */
+    .media { margin: 22px 0 0; }
+    .media figure { margin: 0; }
+    .media img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+      background: #fff;
+    }
+    .media figcaption {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: var(--color-sub-text);
+      letter-spacing: 0.02em;
+      line-height: 1.6;
+    }
+    .media-grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: 1fr;
+      margin-top: 18px;
+    }
+    @media (min-width: 700px) {
+      .media-grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .media-grid figure img { aspect-ratio: 4 / 3; object-fit: cover; }
+
+    /* --------------------
+      Sticky CTA (Square) 既存
+    -------------------- */
+    .sticky-cta {
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(92%, 520px);
+      z-index: 1000;
+      background: #fff;
+      border-radius: var(--radius-pill);
+      display: flex;
+      align-items: center;
+      padding: 10px 22px;
+      box-shadow: var(--shadow-sticky);
+      border: 2px solid var(--color-main);
+      text-decoration: none;
+      color: var(--color-main);
+      gap: 12px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .sticky-cta:focus-visible {
+      outline: 3px solid rgba(176,138,66,0.35);
+      outline-offset: 3px;
+    }
+
+    .sticky-cta-text {
+      flex-grow: 1;
+      font-weight: 800;
+      font-size: 1.06rem;
+      letter-spacing: 0.02em;
+      line-height: 1.25;
+    }
+
+    .sticky-cta-text small{
+      display:block;
+      font-weight: 500;
+      color: var(--color-sub-text);
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 2px;
+    }
+
+    .sticky-cta-btn {
+      background: var(--color-main);
+      color: #fff;
+      padding: 9px 18px;
+      border-radius: var(--radius-pill);
+      font-weight: 800;
+      font-size: 0.92rem;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .sticky-cta.is-hidden {
+      opacity: 0;
+      transform: translateX(-50%) translateY(10px);
+      pointer-events: none;
+    }
+
+    /* --------------------
+      Sticky CTA (LINE) 追加：スマホのみ表示
+    -------------------- */
+    .sticky-cta-line {
+      position: fixed;
+      bottom: 86px; /* Squareの上に重ねない */
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(92%, 520px);
+      z-index: 1001; /* Squareより上 */
+      background: #fff;
+      border-radius: var(--radius-pill);
+      display: none; /* デフォルト非表示（PCでは出さない） */
+      align-items: center;
+      padding: 10px 22px;
+      box-shadow: var(--shadow-sticky);
+      border: 2px solid var(--color-line);
+      text-decoration: none;
+      color: var(--color-line);
+      gap: 12px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .sticky-cta-line:focus-visible {
+      outline: 3px solid rgba(6,199,85,0.25);
+      outline-offset: 3px;
+    }
+
+    .sticky-cta-line-text {
+      flex-grow: 1;
+      font-weight: 900;
+      font-size: 1.02rem;
+      letter-spacing: 0.02em;
+      line-height: 1.25;
+    }
+
+    .sticky-cta-line-text small {
+      display:block;
+      font-weight: 600;
+      color: var(--color-sub-text);
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 2px;
+    }
+
+    .sticky-cta-line-btn {
+      background: var(--color-line);
+      color: #fff;
+      padding: 9px 16px;
+      border-radius: var(--radius-pill);
+      font-weight: 900;
+      font-size: 0.92rem;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .sticky-cta-line.is-hidden {
+      opacity: 0;
+      transform: translateX(-50%) translateY(10px);
+      pointer-events: none;
+    }
+
+    /* --------------------
+      Footer
+    -------------------- */
+    footer {
+      text-align:center;
+      color: var(--color-sub-text);
+      font-size: 0.85rem;
+      padding-bottom: 24px;
+    }
+
+    footer a { text-decoration: underline; text-underline-offset: 3px; }
+
+    /* --------------------
+      Responsive tuning
+    -------------------- */
+    @media (max-width: 820px) {
+      .container { padding: 0 18px 210px; }
+    }
+
+    @media (max-width: 600px) {
+      body { font-size: 17px; }
+      .hero { min-height: 440px; margin-bottom: 54px; }
+      .hero-title { font-size: 1.86rem; }
+      .price-yen { font-size: 2.85rem; }
+      .card { padding: 34px 22px; }
+      .price-box { padding: 38px 18px; }
+      .btn { padding: 18px 22px; }
+      .btn-text { font-size: 1.08rem; }
+      .sticky-cta { padding: 10px 16px; }
+      .sticky-cta-line { display: flex; padding: 10px 16px; } /* スマホで表示 */
+      .media-grid figure img { aspect-ratio: 16 / 10; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn, .sticky-cta, .sticky-cta-line { transition: none; }
+      .btn:hover { transform: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero" aria-label="メインビジュアル">
+    <img src="image/IMG_2661.JPG" alt="刺し子のある暮らし" class="hero-img">
+
+    <div class="hero-content">
+      <span class="hero-tag">数量限定・全17セット（六菱5／枡米刺し12）</span>
+      <h1 class="hero-title">
+        セリアのミニ花ふきん<br>
+        <span class="hero-title-main">「途中で止まった」方へ</span>
+        <div class="hero-sub">完成応援キット</div>
+      </h1>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <p class="intro-text">
+      その針、もう一度進めてみませんか？<br>
+      迷いや孤独を解消し、完成まで優しく寄り添う<br>
+      <span class="accent-mark">“伴走型”の応援セット</span>をご用意しました。
+    </p>
+
+    <!-- 画像：導入ギャラリー -->
+    <section class="section" aria-label="イメージギャラリー（導入）">
+      <div class="card" style="padding-top: 30px;">
+        <p style="margin:0; text-align:center; color: var(--color-sub-text); font-weight:700; letter-spacing:0.04em;">
+          キットの雰囲気
+        </p>
+
+        <div class="media media-grid" aria-label="導入写真3枚">
+          <figure>
+            <img src="image/IMG_2692.JPG" alt="糸の色合わせイメージ（差し替え）">
+            <figcaption>糸の色合わせも、迷わない組み合わせに。</figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/IMG_2664.JPG" alt="道具一式のイメージ（差し替え）">
+            <figcaption>必要なものが「これで揃う」安心感。</figcaption>
+          </figure>
+
+          <figure>
+            <img src="image/IMG_2661.JPG" alt="完成イメージ（差し替え）">
+            <figcaption>最後まで進むと、手元に残る小さな達成感。</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 価格・購入導線 -->
+    <section class="section" id="order">
+      <div class="price-box">
+        <div style="font-weight:700; color: var(--color-sub-text); margin-bottom:10px;">
+          セリア ミニ花ふきん 完成応援キット
+        </div>
+        <div class="price-yen">2,000<span>円 (税込・送料込)</span></div>
+
+        <div class="stock-row" aria-label="在庫状況">
+          <span class="stock-badge">六菱：残り5</span>
+          <span class="stock-badge">枡米刺し：残り12</span>
+        </div>
+
+        <div class="media" aria-label="キット全体写真（購入前）">
+          <figure>
+            <img src="image/IMG_2664.JPG" alt="キット全体の写真（差し替え）">
+            <figcaption>※写真はイメージです（実際の内容は在庫状況により近い構成でお届けします）。</figcaption>
+          </figure>
+        </div>
+
+        <!-- ▼リンク保持（Square決済URL） -->
+        <a href="https://my-site-104584-109581.square.site/product/-/R2JAZT6SNAJKWTU7JNX53J5D?cp=true&sa=true&sbp=false&q=false" class="btn btn-square" data-cta="square_main">
+          <span class="btn-text">クレジットカードで購入</span>
+          <span class="btn-desc">Square決済（安心・簡単です）</span>
+        </a>
+
+        <!-- ▼リンク保持（公式LINE） -->
+        <a href="https://lin.ee/PDYsCVv" class="btn btn-line" target="_blank" rel="noopener" data-cta="line_sub">
+          <span class="btn-text">公式LINEで購入・相談（サブ）</span>
+          <span class="btn-desc">口座振込のご案内／質問もこちら</span>
+        </a>
+
+        <div class="notice-mini">
+          ※InstagramのDM／コメントでの予約・購入受付は行っていません。<br>
+          ※在庫切れ時の「予約販売」は行わず、販売は数量限定で終了します。
+        </div>
+      </div>
+
+      <div id="mercari" class="note-box">
+        <p class="note-box-title">メルカリをご希望の方へ（例外対応）</p>
+        <p style="margin:0; color: var(--color-text);">
+          メルカリでのご購入をご希望の場合は、公式LINEで
+          <strong style="color: var(--color-mercari);">「メルカリ希望」</strong>
+          と送ってください。専用ページを作成してご案内します。
+        </p>
+
+        <div style="margin-top: 14px;">
+          <a href="https://lin.ee/PDYsCVv" class="btn btn-line" target="_blank" rel="noopener" style="margin-bottom:0;" data-cta="line_for_mercari">
+            <span class="btn-text">公式LINEを開く</span>
+            <span class="btn-desc">（メルカリ希望の連絡はこちら）</span>
+          </a>
+        </div>
+
+        <div class="media" aria-label="梱包イメージ（任意）">
+          <figure>
+            <img src="image/IMG_2682.JPG" alt="丁寧な梱包イメージ（差し替え）">
+            <figcaption>丁寧に梱包してお届けします（写真はイメージ）。</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- なぜ止まる？ -->
+    <section class="section">
+      <h2 class="section-title">なぜ、止まってしまうのでしょう</h2>
+
+      <div class="card">
+        <p style="margin-top:0;">
+          刺し子は、心を落ち着かせる素晴らしい時間です。<br>
+          でも一人で進めていると「これであっているかしら？」という小さな不安が積み重なり、
+          いつの間にか針が遠のいてしまう…。
+        </p>
+
+        <div class="media" aria-label="途中で止まった状態のイメージ">
+          <figure>
+            <img src="image/IMG_2692.JPG" alt="途中で止まった刺し子のイメージ（差し替え）">
+            <figcaption>「これで合ってる？」が積み重なると、手が止まりやすくなります。</figcaption>
+          </figure>
+        </div>
+
+        <ul class="check-list">
+          <li><strong>準備の壁</strong>：何が必要か調べるだけで疲れてしまう</li>
+          <li><strong>手順の壁</strong>：説明を読んでも刺し順がピンとこない</li>
+          <li><strong>孤独の壁</strong>：つまずいた時に、誰にも聞けない</li>
+        </ul>
+
+        <p style="text-align:center; font-style: italic; color: var(--color-main); margin-top: 26px;">
+          止まったのは、あなたの<strong>根気のなさ</strong>のせいではありません。
+        </p>
+      </div>
+    </section>
+
+    <!-- 完成報告（M様） -->
+    <section class="section">
+      <h2 class="section-title">完成報告</h2>
+
+      <div class="card">
+        <p style="font-family: var(--font-serif); color: var(--color-main); font-weight: 700; margin-top:0;">
+          ご購入者さまの声
+        </p>
+
+        <div class="quote" aria-label="お客様の声（原文）">
+          <p style="margin:0; color: var(--color-sub-text);">
+            ～原文のまま～
+
+「私は学校で基本を学んだくらいです。
+
+なので物凄くやりたいけど、「きっと無理だろうなー」という気持ちの方が強くて、刺し子どりさんのキット関係が出ても、LIVEで見ても勇気が出ませんでした。
+
+今回キットを見た時に、
+「できるから、やってみなよー」みたいなお誘いの声が聞こえて買いました。上手く説明できないー😭
+
+買うものは何となく理解してきたけど、本当に最初からやる時に何が必要かわからなくなってたのもありましたが、キットを見て解決しました。
+
+糸の色も、こういう組み合わせなのかー。と実際に手に取ってみて参考になりました！
+
+説明、動画は凄くわかりやすかったです。
+刺し子どりさんに実際に教わりながらやってる感じでした。」
+
+～ここまで。
+          </p>
+          <small>— M様</small>
+        </div>
+
+        <div class="media" aria-label="完成作品イメージ">
+          <figure>
+            <img src="image/IMG_2661.JPG" alt="完成したミニ花ふきんのイメージ（差し替え）">
+            <figcaption>完成のイメージ（写真はサンプルです）。</figcaption>
+          </figure>
+        </div>
+
+        <p style="margin-top: 26px;">
+          「分かりやすい」だけでなく、<span class="accent-mark">“一緒に進めている感覚”</span>があると、止まりにくくなります。<br>
+          この声を起点に、キットを組み直しました。
+        </p>
+      </div>
+    </section>
+
+    <!-- キット内容 -->
+    <section class="section">
+      <h2 class="section-title">このキットに含まれるもの</h2>
+
+      <div class="card">
+        <p style="margin-top:0;">
+          ただの材料セットではありません。あなたが
+          <strong style="color: var(--color-accent);">「完成の喜び」</strong>
+          を味わうためのすべてを詰め込みました。
+        </p>
+
+        <div class="media" aria-label="同梱物の写真">
+          <figure>
+            <img src="image/IMG_2671.JPG" alt="同梱物が分かる写真（差し替え）">
+            <figcaption>同梱物のイメージ（内容は構成を保ったままお届けします）。</figcaption>
+          </figure>
+        </div>
+
+        <ul class="check-list">
+          <li><strong>セリア ミニ花ふきん</strong>（六菱／枡米刺し から選択）</li>
+          <li><strong>刺し子どり厳選・特製和針</strong>（刺しやすさ重視）</li>
+          <li><strong>下書き用フリクションペン＆スクエア定規</strong></li>
+          <li><strong>解説動画＆手順プリント</strong>（YouTubeでいつでも確認可能）</li>
+          <li><strong>公式LINE 個別サポート</strong>（迷ったら写真を送ってください）</li>
+        </ul>
+
+        <div class="media" aria-label="和針アップ（任意）">
+          <figure>
+            <img src="image/IMG_2668.JPG" alt="特製和針のアップ（差し替え）">
+            <figcaption>刺しやすさに配慮した針を厳選しています（写真はイメージ）。</figcaption>
+          </figure>
+        </div>
+
+        <p style="margin-top: 22px; color: var(--color-sub-text); font-size: 0.95rem;">
+          ※別途ご用意ください：はさみ／まち針／アイロン など
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <h2 class="section-title">よくある質問</h2>
+
+      <div class="card" style="padding-bottom: 30px;">
+        <div class="media" aria-label="LINEサポートのイメージ">
+          <figure>
+            <img src="image/IMG_2690.JPG" alt="LINEで相談できるイメージ（差し替え）">
+            <figcaption>迷ったら写真を送ってください。やり取りしながら進められます。</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="faq-wrap">
+        <details>
+          <summary>初心者でも完成させられますか？</summary>
+          <p>はい、もちろんです。むしろ「一度止まった方」が迷わないよう、動画とプリントで丁寧に解説しています。</p>
+        </details>
+
+        <details>
+          <summary>道具は自分で揃える必要がありますか？</summary>
+          <p>主要な道具はすべてセットになっています。ご自宅では「はさみ」と「アイロン」だけご用意ください。</p>
+        </details>
+
+        <details>
+          <summary>メルカリで買いたいのですが…</summary>
+          <p>例外対応として、公式LINEで「メルカリ希望」と送っていただいた方に専用ページをご案内します。</p>
+        </details>
+
+        <details>
+          <summary>在庫切れの時は予約できますか？</summary>
+          <p>恐れ入りますが、在庫切れ時の予約販売は行っていません。数量限定でのご案内となります。</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- =========================
+      追加：フッター直前のCVボタン一式
+      目的：読み切った人が迷わず購入/相談へ戻れる
+      ※リンク・文言は既存のものを保持
+    ========================== -->
+    <section class="section" id="final-cta" aria-label="最終購入導線">
+      <div class="price-box">
+        <div style="font-weight:700; color: var(--color-sub-text); margin-bottom:10px;">
+          セリア ミニ花ふきん 完成応援キット
+        </div>
+        <div class="price-yen">2,000<span>円 (税込・送料込)</span></div>
+
+        <div class="stock-row" aria-label="在庫状況（最終）">
+          <span class="stock-badge">六菱：残り5</span>
+          <span class="stock-badge">枡米刺し：残り12</span>
+        </div>
+
+        <!-- ▼リンク保持（Square決済URL） -->
+        <a href="https://my-site-104584-109581.square.site/product/-/R2JAZT6SNAJKWTU7JNX53J5D?cp=true&sa=true&sbp=false&q=false" class="btn btn-square" data-cta="square_final">
+          <span class="btn-text">クレジットカードで購入</span>
+          <span class="btn-desc">Square決済（安心・簡単です）</span>
+        </a>
+
+        <!-- ▼リンク保持（公式LINE） -->
+        <a href="https://lin.ee/PDYsCVv" class="btn btn-line" target="_blank" rel="noopener" data-cta="line_final">
+          <span class="btn-text">公式LINEで購入・相談（サブ）</span>
+          <span class="btn-desc">口座振込のご案内／質問もこちら</span>
+        </a>
+
+        <div class="notice-mini">
+          ※InstagramのDM／コメントでの予約・購入受付は行っていません。<br>
+          ※在庫切れ時の「予約販売」は行わず、販売は数量限定で終了します。
+        </div>
+
+        <!-- メルカリ導線も最終に残す（例外対応） -->
+        <div class="note-box" style="text-align:left;">
+          <p class="note-box-title">メルカリをご希望の方へ（例外対応）</p>
+          <p style="margin:0; color: var(--color-text);">
+            メルカリでのご購入をご希望の場合は、公式LINEで
+            <strong style="color: var(--color-mercari);">「メルカリ希望」</strong>
+            と送ってください。専用ページを作成してご案内します。
+          </p>
+          <div style="margin-top: 14px;">
+            <a href="https://lin.ee/PDYsCVv" class="btn btn-line" target="_blank" rel="noopener" style="margin-bottom:0;" data-cta="line_for_mercari_final">
+              <span class="btn-text">公式LINEを開く</span>
+              <span class="btn-desc">（メルカリ希望の連絡はこちら）</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="page-footer">
+      <p style="margin:0 0 10px;">© 刺し子どり - 丁寧な手仕事のある暮らしを</p>
+      <a href="https://doriken.shop/%E7%89%B9%E5%AE%9A%E5%95%86%E5%8F%96%E5%BC%95%E6%B3%95%E3%81%AB%E5%9F%BA%E3%81%A5%E3%81%8F%E8%A1%A8%E8%A8%98/" target="_blank" rel="noopener">特定商取引法に基づく表記</a>
+    </footer>
+
+  </main>
+
+  <!-- 追加：スマホ用 追従ボタン（公式LINE） -->
+  <a href="https://lin.ee/PDYsCVv" class="sticky-cta-line" id="stickyLine" target="_blank" rel="noopener" data-cta="line_sticky">
+    <div class="sticky-cta-line-text">
+      <small>購入・相談はこちら</small>
+      公式LINEを開く
+    </div>
+    <div class="sticky-cta-line-btn">LINE</div>
+  </a>
+
+  <!-- 既存：下部固定CTA（Square） -->
+  <a href="https://my-site-104584-109581.square.site/product/-/R2JAZT6SNAJKWTU7JNX53J5D?cp=true&sa=true&sbp=false&q=false" class="sticky-cta" id="stickyCta" data-cta="square_sticky">
+    <div class="sticky-cta-text">
+      <small>送料込み 2,000円</small>
+      完成まで伴走します
+    </div>
+    <div class="sticky-cta-btn">購入する</div>
+  </a>
+
+  <script>
+    (function () {
+      "use strict";
+
+      // ===== 設定（必要に応じて調整） =====
+      const SCROLL_OFFSET = 88; // 固定CTA分の余白
+      const stickySquare = document.getElementById("stickyCta");
+      const stickyLine = document.getElementById("stickyLine");
+      const footer = document.getElementById("page-footer");
+
+      // 1) アンカー遷移（#mercari など）のスクロール位置を少し上に
+      function scrollToHashTarget(hash) {
+        const id = hash.replace("#", "");
+        if (!id) return;
+        const el = document.getElementById(id);
+        if (!el) return;
+
+        const rect = el.getBoundingClientRect();
+        const top = window.pageYOffset + rect.top - SCROLL_OFFSET;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+
+      // 初期ハッシュがある場合
+      if (window.location.hash) {
+        setTimeout(() => scrollToHashTarget(window.location.hash), 0);
+      }
+
+      // クリック時のアンカー処理
+      document.addEventListener("click", function (e) {
+        const a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        const href = a.getAttribute("href");
+        if (!href || href === "#") return;
+
+        const target = document.getElementById(href.slice(1));
+        if (!target) return;
+
+        e.preventDefault();
+        history.pushState(null, "", href);
+        scrollToHashTarget(href);
+      });
+
+      // 2) フッター付近では固定CTAを隠す（被り回避）
+      //    footer が見えたら隠す、離れたら表示する（Square + LINE）
+      if ("IntersectionObserver" in window && footer) {
+        const io = new IntersectionObserver((entries) => {
+          for (const entry of entries) {
+            if (entry.target === footer) {
+              const hidden = entry.isIntersecting;
+              if (stickySquare) stickySquare.classList.toggle("is-hidden", hidden);
+              if (stickyLine) stickyLine.classList.toggle("is-hidden", hidden);
+            }
+          }
+        }, { root: null, threshold: 0.05 });
+        io.observe(footer);
+      }
+
+      // 3) CTAクリック計測（必要ならGA等に接続）
+      document.addEventListener("click", function (e) {
+        const cta = e.target.closest("[data-cta]");
+        if (!cta) return;
+        const name = cta.getAttribute("data-cta");
+        // 例：gtag('event', 'cta_click', { 'cta_name': name });
+        // console.log("[CTA]", name);
+      });
+    })();
+  </script>
+
+</body>
+</html>
